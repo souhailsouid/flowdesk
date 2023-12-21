@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# My Binance Market App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This project is a React application built with TypeScript and Vite, aimed at retrieving and displaying market data for selected currency pairs from the Binance public API. It allows users to select a currency pair, fetches market data, and displays trades with sorting capabilities.
 
-Currently, two official plugins are available:
+## Goals
+- Provide a form for users to select a currency pair.
+- Fetch and display market data for the selected pair from Binance public REST API, including ticker, 24h ticker, and recent trades.
+- Enable sorting of trades data by time, price, and quantity.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Specifications
+- React application with TypeScript.
+- Styled components for CSS styling.
+- Published source code in a VCS (Version Control System).
 
-## Expanding the ESLint configuration
+## Technology Stack
+- React 18.2.0
+- TypeScript 5.2.2
+- Vite 5.0.8
+- MUI (Material-UI) for UI components
+- ApexCharts and Chart.js for data visualization
+- Axios for HTTP requests
+- React Query for data fetching management
+- ESLint for code quality
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setup and Running the Project
+- Ensure Node.js and PNPM are installed.
+- Clone the repository: `git clone <repository-url>`
+- Navigate to the project directory: `cd my-binance-market-app`
+- Install dependencies: `pnpm install`
+- Start the development server: `pnpm run dev`
 
-- Configure the top-level `parserOptions` property like this:
+For version management, this project uses NVM (Node Version Manager). To set the correct node version, run `nvm use` before starting the development server.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Running Tests
+- To run tests: `<command-to-run-tests>`
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Linting
+- ESLint is configured for code quality and consistency. To run ESLint: `pnpm run lint`
+
+## Building for Production
+- To build the project: `pnpm run build`
+- To preview the build: `pnpm run preview`
+
+## Documentation
+- Binance API: [Binance API Documentation](https://binance-docs.github.io/apidocs/spot/en/#change-log)
+
+
+
+
