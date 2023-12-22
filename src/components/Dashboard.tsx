@@ -16,8 +16,8 @@ const Dashboard = () => {
     }
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-             <MarketInfo data={ticker24hData} currencyPair={ticker24hData.symbol} price={''} />
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} data-testid="dashboard-component-display">
+             <MarketInfo  data={ticker24hData} currencyPair={ticker24hData.symbol} price={''} />
             <FlexChartContainer>
                 <VolumeAnalysisChart klinesData={Array.isArray(kLinesData) ? kLinesData: []} />
                 <CandlestickChart data={Array.isArray(kLinesData) ? kLinesData: []} />

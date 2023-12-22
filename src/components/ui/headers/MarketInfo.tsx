@@ -19,9 +19,9 @@ const MarketInfo = ({ data, currencyPair }: HeaderProps) => {
         return <p>Loading...</p>
     }
     return (
-        <HeaderContainer container>
-            <ResponsiveGridItem text={currencyPair} xsSize={12} smSize={2} />
-            <ResponsiveGridItem text={currentMessage.data.a} xsSize={12} smSize={2} />
+        <HeaderContainer container data-testid="marketInfo-component-display">
+            <ResponsiveGridItem dataTestId="currency-pair-display" text={currencyPair} xsSize={12} smSize={2} />
+            <ResponsiveGridItem dataTestId="current-price-display"  text={currentMessage.data.a} xsSize={12} smSize={2} />
             <MarketInfoGrid data={
                 [
                     { title: "24h Change", value: `${data.priceChange} ${data.priceChangePercent}%` },

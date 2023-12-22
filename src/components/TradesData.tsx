@@ -15,7 +15,7 @@ const TradesData = () => {
     }
 
     return (
-        <Grid container spacing={1}>
+        <Grid container spacing={1} data-testid="tradeData-component-display">
             <Grid item xs={12} md={6}>
                 <StyledChartContainer  width="650px" margin="0 0 2rem 0">
                     <PriceSummaryChart tickerData={ticker24hData} />

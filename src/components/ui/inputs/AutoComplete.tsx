@@ -29,6 +29,7 @@ export default function UseAutocomplete({ options, value, onchange }: {
     <div style={{ marginBottom: 24 }}>
       <StyledLabel {...getInputLabelProps()}>Currency pair</StyledLabel>
       <StyledAutocompleteRoot
+        data-testid="auto-complete-display"
         {...getRootProps()}
         className={focused ? 'focused' : ''}
       >

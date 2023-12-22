@@ -1,7 +1,7 @@
 import { Divider, Grid } from '@mui/material';
 import React from 'react';
 import { parseAndFormatNumber } from '../../../utils/Helpers';
-import { MarketDataDisplay } from './MarketDataDisplay';
+import MarketDataDisplay from './MarketDataDisplay';
 
 
 interface MarketData {

@@ -38,7 +38,7 @@ const EnhancedTable = ({ rows }: RowsDataType) => {
     );
 
     return (
-        <Box>
+        <Box data-testid="table-component-display">
             <StyledCard>
                 <TableContainer>
                     <Table

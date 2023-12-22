@@ -9,6 +9,7 @@ const CustomButton = React.forwardRef(function CustomButton(
     props: ButtonProps,
     ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
+ 
     const { children, disabled } = props;
     const { active, focusVisible, getRootProps } = useButton({
         ...props,
@@ -23,6 +24,7 @@ const CustomButton = React.forwardRef(function CustomButton(
                 disabled,
                 focusVisible,
             })}
+
         >
             {children}
         </CustomButtonRoot>
@@ -36,10 +38,10 @@ interface BtnProps {
     disabled?: boolean;
 }
 
-export const UseButton = ({text, type, onClick, disabled}: BtnProps) => {
+export const UseButton = ({ text, type, onClick, disabled }: BtnProps) => {
     return (
         <Stack spacing={2} direction="row">
-            <CustomButton onClick={onClick} type={type} disabled={disabled}>{text}</CustomButton>
+            <CustomButton onClick={onClick} data-testid="button-display" type={type} disabled={disabled}>{text}</CustomButton>
         </Stack>
     );
 }
@@ -53,7 +55,7 @@ const blue = {
     600: '#000',
     700: '#000',
 };
-  
+
 const grey = {
     50: '#F3F6F9',
     100: '#E5EAF2',

@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import React from 'react';
-import { MarketDataDisplay } from './MarketDataDisplay';
+import MarketDataDisplay from './MarketDataDisplay';
 
 interface MarketDataCardsInfo {
     title: string;

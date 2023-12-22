@@ -1,4 +1,5 @@
 import { Grid, Typography, useTheme } from '@mui/material';
+import React from 'react';
 import { StyledBox } from '../styles/StyledBox';
 import { Ticker24hDataType } from '../types';
 import { formatTimestamp } from '../utils/Helpers';

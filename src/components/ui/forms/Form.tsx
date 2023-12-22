@@ -13,7 +13,7 @@ interface FormComponentProps {
 
 const FormComponent: React.FC<FormComponentProps> = ({ onSubmit, options, value, onChange, loading }) => {
     return (
-        <Box component="form" onSubmit={onSubmit} sx={{ mt: 2, mb: 4, ml: 2 }}>
+        <Box component="form" onSubmit={onSubmit} sx={{ mt: 2, mb: 4, ml: 2 }} data-testid="form-component-display">
             <Grid container spacing={2} flexDirection="column" alignItems="center">
                 <UseAutocomplete options={options} value={value} onchange={onChange} />
                 <UseButton text='Load data' type="submit" disabled={loading} />

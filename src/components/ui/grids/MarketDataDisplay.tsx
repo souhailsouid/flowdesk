@@ -1,6 +1,7 @@
 import { CardContent, Grid, Typography, styled, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 
+
 const StyledCardContent = styled(CardContent)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
@@ -17,16 +18,16 @@ const StyledCardContent = styled(CardContent)(({ theme }) => ({
     },
 }));
 
-export const MarketDataDisplay = ({ title, value, color }: { title: string, value: string, color?: string }) => {
+ const MarketDataDisplay = ({ title, value, color }: { title: string, value: string, color?: string }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Grid item xs={12} sm={12}>
             <StyledCardContent>
-                <Typography color="textSecondary" gutterBottom={isMobile} fontSize="18px">
+                <Typography color="textSecondary" data-testid="title-display" gutterBottom={isMobile} fontSize="18px">
                     {title}
                 </Typography>
-                <Typography color={color || "textPrimary"}>
+                <Typography data-testid="value-display" color={color || "textPrimary"}>
                     {value}
                 </Typography>
             </StyledCardContent>
@@ -34,5 +35,5 @@ export const MarketDataDisplay = ({ title, value, color }: { title: string, valu
     )
 }
 
-
+export default MarketDataDisplay;
 
